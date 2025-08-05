@@ -1,28 +1,28 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Provider as PaperProvider } from 'react-native-paper';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import LoginScreen from './src/screens/LoginScreen';
+import DashboardScreen from './src/screens/DashboardScreen';
+import PropertyListScreen from './src/screens/PropertyListScreen';
+import PropertyDetailScreen from './src/screens/PropertyDetailScreen';
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+const Stack = createStackNavigator();
 
+const App = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
-  );
-}
+      <PaperProvider>
+            <NavigationContainer>
+                    <Stack.Navigator initialRouteName="Login">
+                              <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+                                        <Stack.Screen name="Dashboard" component={DashboardScreen} />
+                                                  <Stack.Screen name="PropertyList" component={PropertyListScreen} options={{ title: 'Properties' }} />
+                                                            <Stack.Screen name="PropertyDetail" component={PropertyDetailScreen} options={{ title: 'Property Details' }} />
+                                                                    </Stack.Navigator>
+                                                                          </NavigationContainer>
+                                                                              </PaperProvider>
+                                                                                );
+                                                                                };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+                                                                                export default App;
