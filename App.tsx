@@ -12,17 +12,17 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
-      <PaperProvider>
-            <NavigationContainer>
-                    <Stack.Navigator initialRouteName="Login">
-                              <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-                                        <Stack.Screen name="Dashboard" component={DashboardScreen} />
-                                                  <Stack.Screen name="PropertyList" component={PropertyListScreen} options={{ title: 'Properties' }} />
-                                                            <Stack.Screen name="PropertyDetail" component={PropertyDetailScreen} options={{ title: 'Property Details' }} />
-                                                                    </Stack.Navigator>
-                                                                          </NavigationContainer>
-                                                                              </PaperProvider>
-                                                                                );
-                                                                                };
+    <PaperProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Dashboard" component={DashboardScreen} />
+          <Stack.Screen name="PropertyList" component={PropertyListScreen} options={{ title: 'Properties' }} />
+          <Stack.Screen name="PropertyDetail" component={PropertyDetailScreen} options={{ title: 'Property Details' }} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
+  );
+};
 
-                                                                                export default App;
+export default App;
