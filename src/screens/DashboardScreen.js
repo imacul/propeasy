@@ -40,10 +40,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DashboardScreen;                                                                                                                                                                    },
-                                                                                                                                                                      card: {
-                                                                                                                                                                          marginBottom: 16,
-                                                                                                                                                                            },
-                                                                                                                                                                            });
-
-                                                                                                                                                                            export default DashboardScreen;
+export default DashboardScreen;
